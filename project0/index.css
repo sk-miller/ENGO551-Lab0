@@ -1,0 +1,571 @@
+/*--Course:ENGO551--
+--Date:23-Jan-24--
+--Assignment:Lab 0--
+--Name:ShannonMiller--
+--UCID:30097262--*/
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* Base styles for all screen sizes */
+body {
+  margin: 0;
+}
+
+body.general {
+  margin: 2;
+}
+
+header {
+  padding-left: 3%;
+  text-align: left;
+  background: #25274D;
+  color: white;
+  font-size: 35px;
+}
+
+footer {
+  text-align: center;
+  background: #25274D;
+  color: white;
+  padding: 25px;
+}
+
+ul {
+  list-style-type: disc;
+  /* Type of bullet (e.g., disc, circle, square) */
+}
+
+li {
+  margin-bottom: 10px;
+  /* Spacing between list items */
+}
+
+/* styles for colored backgrounds and sections to divide up mobile and desktop features*/
+.mobile {
+  padding-left: 0%;
+}
+
+.desktop {
+  padding-left: 0%;
+}
+
+.blue_bg {
+  text-align: center;
+  background: #29648A;
+  display: block;
+  color: white;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-bottom: 5%;
+}
+
+/* styles for images with positioning, padding, margins etc*/
+#header-image {
+  position: relative;
+  width: 100%;
+}
+
+#rowing-image {
+  position: relative;
+  width: 100%;
+}
+
+#flourish-image {
+  position: relative;
+  width: 100%;
+  content: url("assets/flourish.png");
+  z-index: 0;
+  /* Set a lower z-index to keep it below other elements */
+  height: 800px;
+}
+
+#home-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#family-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#rowing-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#engineering-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#extfamily-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#rowingme-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#franceeng-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#accent-image {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Center horizontally */
+  max-width: 100%;
+  height: auto;
+  content: url("assets/flourish_logo.png");
+  z-index: 1;
+  /* Set a higher z-index to bring it above the background image */
+  margin-bottom: 30px;
+}
+
+#accent-image-mobile {
+  max-width: 100%;
+  height: auto;
+  content: url("assets/flourish_logo.png");
+  z-index: 1;
+  /* Set a higher z-index to bring it above the background image */
+  padding-top: 10%;
+  margin: 0px auto;
+  margin-bottom: 30px;
+}
+
+/* styles for fonts with different weights and positions and padding and different sizes*/
+.big {
+  padding-top: 1%;
+  font-size: 70px;
+  padding-left: 3%;
+}
+
+.medium {
+  padding-left: 35%;
+  padding-top: 12%;
+  font-size: 35px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.small {
+  /*margin-top: 10px;*/
+  padding-top: 1%;
+  font-size: 30px;
+  /*padding-left: 1%;*/
+  /*padding-right: 500%;*/
+  font-family: "Titillium Web", sans-serif;
+  font-style: italic;
+  text-align: left;
+}
+
+.small_body_on_pic {
+  display: block;
+  margin-top: 10px;
+  padding-top: 10%;
+  font-size: 22px;
+  padding-left: 35%;
+  /*padding-right: 500%;*/
+  font-family: "Titillium Web", sans-serif;
+  text-align: left;
+}
+
+.small_body, .small_body_column {
+  display: block;
+  margin-top: 10px;
+  padding-top: 1%;
+  font-size: 22px;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* padding-right: 500%; */
+  font-family: "Titillium Web", sans-serif;
+  text-align: left;
+}
+
+.small_body_column {
+  padding-left: 5%;
+  margin-bottom: 5%;
+}
+
+.small_body_title {
+  display: block;
+  margin-top: 10px;
+  padding-top: 1%;
+  font-size: 25px;
+  padding-right: 5%;
+  /*padding-right: 500%;*/
+  font-family: "Titillium Web", sans-serif;
+  text-align: left;
+}
+
+.bold_text {
+  display: block;
+  padding-left: 5%;
+  padding-top: 1%;
+  font-size: 27px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+}
+
+.bold_text_fixed {
+  display: block;
+  padding-left: 5%;
+  padding-top: 1%;
+  font-size: 27px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  padding-left: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bold_text_with_space {
+  display: block;
+  padding-top: 1%;
+  font-size: 27px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  margin: 40px;
+  text-align: center;
+}
+
+/* styles for different buttons */
+.small_block {
+  float: left;
+  display: block;
+  height: 100%;
+  border: none;
+  color: white;
+  padding: 20px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #2E9CCA;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+
+.smaller_block {
+  float: left;
+  display: block;
+  height: 100%;
+  border: none;
+  color: white;
+  padding: 20px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #2E9CCA;
+  margin-top: 3%;
+}
+
+/*creating the three-column layout*/
+.column {
+  width: 27%;
+  /* Adjust the width of each column as needed */
+  display: inline-block;
+  vertical-align: top;
+  margin: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.column:first-child {
+  margin-left: 5%;
+}
+
+.column:last-child {
+  margin-right: 5%;
+}
+
+.column img {
+  max-width: 100%;
+  height: auto;
+}
+
+.small_heading_div {
+  flex: 70%;
+  /*padding: 20px;*/
+  padding-left: 5%;
+}
+
+.column_section {
+  padding-left: 5%;
+  margin-left: 5%;
+}
+
+/* Media query for screens up to 640px */
+@media screen and (max-width: 640px) {
+  #header-image {
+    content: url("assets/beach.jpg");
+  }
+  #rowingme-image {
+    content: url("assets/rowingme.jpg");
+  }
+  #extfamily-image {
+    content: url("assets/extfamily.jpg");
+  }
+  #franceeng-image {
+    content: url("assets/franceeng.jpg");
+  }
+  #flourish-image {
+    display: none;
+  }
+  .small {
+    display: block;
+    margin: 0px;
+    padding-left: 3%;
+  }
+  .medium {
+    padding-left: 5%;
+  }
+  /* Hide the button at 640px */
+  .small_body_on_pic {
+    padding-left: 5%;
+  }
+  .small_body_title {
+    padding-left: 5%;
+  }
+  .column {
+    display: none;
+  }
+  #home-image {
+    width: 100%;
+    content: url("assets/selfie.jpg");
+  }
+  #family-image {
+    width: 100%;
+    content: url("assets/fam.jpg");
+  }
+  #rowing-image {
+    width: 100%;
+    content: url("assets/rowing8.jpg");
+  }
+  #engineering-image {
+    width: 100%;
+    content: url("assets/hungaryeng.jpg");
+  }
+  .small_block {
+    margin-bottom: 5%;
+  }
+  .small_body_title {
+    padding-top: 5%;
+  }
+  #accent-image {
+    display: none;
+  }
+  .bold_text_fixed {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  #header-image {
+    content: url("assets/beach.jpg");
+  }
+  #rowingme-image {
+    content: url("assets/rowingme.jpg");
+  }
+  #extfamily-image {
+    content: url("assets/extfamily.jpg");
+  }
+  #franceeng-image {
+    content: url("assets/franceeng.jpg");
+  }
+  #flourish-image {
+    display: none;
+  }
+  .small {
+    display: block;
+    margin: 0px;
+    padding-left: 3%;
+  }
+  .medium {
+    padding-left: 5%;
+  }
+  /* Hide the button at 640px */
+  .small_body_on_pic {
+    padding-left: 5%;
+  }
+  .small_body_title {
+    padding-left: 5%;
+  }
+  .column {
+    display: none;
+  }
+  #home-image {
+    width: 100%;
+    content: url("assets/selfie.jpg");
+  }
+  #family-image {
+    width: 100%;
+    content: url("assets/fam.jpg");
+  }
+  #rowing-image {
+    width: 100%;
+    content: url("assets/rowing8.jpg");
+  }
+  #engineering-image {
+    width: 100%;
+    content: url("assets/hungaryeng.jpg");
+  }
+  .small_block {
+    margin-bottom: 5%;
+  }
+  .small_body_title {
+    padding-top: 5%;
+  }
+  #accent-image {
+    display: none;
+  }
+  .bold_text_fixed {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+}
+/* Media query for screens from 641px to 1280px */
+@media screen and (min-width: 1201px) and (max-width: 1280px) {
+  /* Show the button at 1280px */
+  button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #header-image {
+    content: url("assets/beach.jpg");
+  }
+  #rowingme-image {
+    content: url("assets/rowingme.jpg");
+  }
+  #extfamily-image {
+    content: url("assets/extfamily.jpg");
+  }
+  #franceeng-image {
+    content: url("assets/franceeng.jpg");
+  }
+  .small_block {
+    display: none;
+  }
+  .medium {
+    position: absolute;
+    top: 5%;
+    /* Adjust the top position as needed */
+    left: 3%;
+    /* Adjust the left position as needed */
+    font-size: 50px;
+    font-family: "Titillium Web", sans-serif;
+    color: white;
+    /* Text color */
+    width: 25%;
+    line-height: 1;
+  }
+  .small_body_on_pic {
+    position: absolute;
+    display: block;
+    top: 25%;
+    /* Adjust the top position as needed */
+    left: 3%;
+    /* Adjust the left position as needed */
+    width: 27%;
+    color: white;
+  }
+  #home-image {
+    content: url("assets/selfie.jpg");
+  }
+  #family-image {
+    content: url("assets/fam.jpg");
+  }
+  #rowing-image {
+    content: url("assets/rowing8.jpg");
+  }
+  #engineering-image {
+    content: url("assets/hungaryeng.jpg");
+  }
+  .mobile {
+    display: none;
+  }
+}
+/* Media query for screens above 1280px */
+@media screen and (min-width: 1281px) {
+  /* Show the button at 1280px */
+  button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #header-image {
+    content: url("assets/beach.jpg");
+  }
+  #rowingme-image {
+    content: url("assets/rowingme.jpg");
+  }
+  #extfamily-image {
+    content: url("assets/extfamily.jpg");
+  }
+  #franceeng-image {
+    content: url("assets/franceeng.jpg");
+  }
+  .small_block {
+    display: none;
+  }
+  .medium {
+    position: absolute;
+    top: 5%;
+    /* Adjust the top position as needed */
+    left: 3%;
+    /* Adjust the left position as needed */
+    font-size: 50px;
+    font-family: "Titillium Web", sans-serif;
+    color: white;
+    /* Text color */
+    width: 25%;
+    line-height: 1;
+  }
+  .small_body_on_pic {
+    position: absolute;
+    display: block;
+    top: 25%;
+    /* Adjust the top position as needed */
+    left: 3%;
+    /* Adjust the left position as needed */
+    width: 27%;
+    color: white;
+  }
+  #home-image {
+    content: url("assets/selfie.jpg");
+  }
+  #family-image {
+    content: url("assets/fam.jpg");
+  }
+  #rowing-image {
+    content: url("assets/rowing8.jpg");
+  }
+  #engineering-image {
+    content: url("assets/hungaryeng.jpg");
+  }
+  .mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=index.css.map */
